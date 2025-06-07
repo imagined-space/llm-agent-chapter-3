@@ -1,0 +1,15 @@
+{
+  "name": "llm-agent-chapter-3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "llm",
+    "agent"
+  ],
+  "author": "xiaomo1128",
+  "license": "ISC",
+  "description": ""
+}
