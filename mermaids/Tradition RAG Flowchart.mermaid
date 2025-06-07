@@ -1,0 +1,15 @@
+flowchart TD
+    subgraph "离线索引阶段 (Offline Indexing - 预处理)"
+        A["原始文档 (知识库)"] --> B["文档分块 (Chunking)"];
+        B --> C["文本向量化 (Embedding)"];
+        C --> D["存入向量数据库 (Vector Database)"];
+    end
+
+    subgraph "在线推理阶段 (Online Inference - 用户提问时)"
+        E["用户问题"] --> F["问题向量化 (Embedding)"];
+        F & D --> G["在向量数据库中<br>进行相似度检索"];
+        G --> H["获取最相关的<br>文档块 (Context)"];
+        E & H --> I["构建提示工程 (Prompt Engineering)<br>将问题和相关文档块<br>组合成新的Prompt"];
+        I --> J["大语言模型 (LLM)<br>根据新Prompt生成答案"];
+        J --> K["最终答案"];
+    end

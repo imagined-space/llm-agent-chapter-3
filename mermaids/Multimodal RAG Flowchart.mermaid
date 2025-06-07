@@ -1,0 +1,19 @@
+flowchart TD
+    subgraph "离线索引阶段 (Offline Indexing - 预处理)"
+        A["多模态文档 (如带图的PDF, 网页)"] --> B["文档解析与分块<br>提取文本块和图片"];
+        
+        subgraph "为不同模态数据建立索引"
+            B -- "文本" --> C["文本向量化<br>(Text Embedding)"];
+            B -- "图片" --> D["图片向量化<br>(Image Embedding)"];
+            C & D --> E["存入多模态向量数据库<br>或<br>各自存入专用数据库"];
+        end
+    end
+
+    subgraph "在线推理阶段 (Online Inference - 用户提问时)"
+        F["用户问题 (可以是文本或图片)"] --> G["问题向量化<br>(文本/图片Embedding)"];
+        G & E --> H["在数据库中进行<br>多模态相似度检索"];
+        H --> I["获取最相关的<br>文本块和图片 (Context)"];
+        F & I --> J["构建多模态提示工程 (Prompt)<br>将问题、相关文本、相关图片<br>组合成新的Prompt"];
+        J --> K["多模态大模型 (MLLM)<br>根据图文并茂的Prompt生成答案"];
+        K --> L["最终答案"];
+    end
