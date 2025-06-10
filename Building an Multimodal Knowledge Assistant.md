@@ -2,7 +2,8 @@
 
 ## 技术架构分析(第 2 页)
 
-- 这页是 LlamaIndex 的产品介绍页，我们重点关注其智能体框架的技术架构：
+> 这页是 LlamaIndex 的产品介绍页，我们重点关注其智能体框架的技术架构：
+
 - **核心技术栈：** LlamaIndex 提供了一个完整的数据处理到应用输出的技术管道：
 
 1. **数据处理层**
@@ -78,7 +79,7 @@
 
 ## 基础 RAG 的技术架构(第 4 页)
 
-- 这页展示了基础 RAG 系统的技术局限性，为后续智能体框架的必要性做了铺垫：
+> 这页展示了基础 RAG 系统的技术局限性，为后续智能体框架的必要性做了铺垫：
 
 **数据处理管道：**
 
@@ -240,8 +241,8 @@ Basic Text Splitting → Advanced Data Processing
 
 ### 与传统框架的技术差异
 
-**传统 RAG：** 只能输出文本回答
-**智能体框架：** 可以执行复杂的下游任务
+- **传统 RAG：** 只能输出文本回答
+- **智能体框架：** 可以执行复杂的下游任务
 
 **技术架构对比：**
 
@@ -264,7 +265,7 @@ Basic Text Splitting → Advanced Data Processing
 
 ## 智能体的四大核心能力(第 8 页)
 
-这页展示了 LlamaIndex 智能体框架的核心推理架构，体现了复杂输入处理的技术实现：
+> 这页展示了 LlamaIndex 智能体框架的核心推理架构，体现了复杂输入处理的技术实现：
 
 **1. Tool Use（工具使用）**
 
@@ -296,9 +297,9 @@ Basic Text Splitting → Advanced Data Processing
 
 **与其他框架的技术对比：**
 
-**LangChain：** 主要关注工具链式调用
-**AutoGen：** 主要关注多智能体对话
-**LlamaIndex：** 突出**认知能力的完整性**（规划-执行-记忆-反思）
+- **LangChain：** 主要关注工具链式调用
+- **AutoGen：** 主要关注多智能体对话
+- **LlamaIndex：** 突出**认知能力的完整性**（规划-执行-记忆-反思）
 
 ### 技术创新点
 
@@ -353,9 +354,9 @@ Basic Text Splitting → Advanced Data Processing
 
 ### 与其他框架的技术对比
 
-**AutoGen**：多智能体对话，但缺乏统一编排
-**LangChain**：主要是单链式调用
-**LlamaIndex**：**企业级的多智能体编排系统**
+- **AutoGen**：多智能体对话，但缺乏统一编排
+- **LangChain**：主要是单链式调用
+- **LlamaIndex**：**企业级的多智能体编排系统**
 
 ### Human-in-the-loop 设计
 
